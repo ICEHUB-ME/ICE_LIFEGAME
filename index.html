@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel="icon" href="./ICE_LIFEGAME_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <strong>Conway's Game of Life</strong>
+        <p>Watch patterns evolve according to simple rules</p>
+
+        <section class="controls">
+            <button class="play_button" id="play_button" style="position: relative;">&#x25BA; Play</button>
+            <button class="step_button" id="step_button" style="position: relative;">&#x23ED; Step</button>
+            <button class="clear_button" id="clear_button" style="position: relative;">&#x1F5D1; Clear</button>
+            <button class="random_button" id="random_button" style="position: relative;">&#x2685; Random</button>
+        </section>
+
+        <section class="stats">
+            <dl class="stats_info">
+                <dt class="stat_label">Generation</dt>
+                <dd class="stat_value" id="generation">0</dd>
+            </dl>
+            <dl class="stats_info">
+                <dt class="stat_label">Population</dt>
+                <dd class="stat_value" id="population">0</dd>
+            </dl>
+            <dl class="stats_info">
+                <dt class="stat_label">FPS</dt>
+                <dd class="stat_value" id="fps">0</dd>
+            </dl>
+        </section>
+
+        <section class="speed_control">
+            <label for="speed_slider">Speed:</label>
+            <input type="range" id="speed_slider" min="1" max="20" value="5" 
+                oninput="speed_value.textContent = this.value">
+            <span class="speed_value" id="speed_value">5</span>
+        </section>
+
+        <section class="game_container">
+            <canvas id="game_canvas" width="800" height="800"></canvas>
+        </section>
+
+        <section class="instruction">
+            <h3>How to Play:</h3>
+            <ul>
+                <li><strong>Click</strong> on cells to toggle them alive/dead</li>
+                <li><strong>Drag</strong> to paint multiple cells at once</li>
+                <li><strong>Play</strong> to start the simulation</li>
+                <li><strong>Step</strong> to advance one generation manually</li>
+                <li><strong>Random</strong> to generate a random starting pattern</li>
+            </ul>
+            <h3>Rules:</h3>
+            <ul>
+                <li>Any live cell with 2-3 neighbors survives</li>
+                <li>Any dead cell wit exactly 3 neighbors becomes alive</li>
+                <li>All other cells die or remain dead</li>
+            </ul>
+        </section>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

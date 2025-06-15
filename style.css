@@ -1,0 +1,196 @@
+/*
+basic
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #34b4fb;
+    min-height: 100vh;
+    display: block;
+    text-align: center;
+}
+
+/*
+container
+*/
+.container {
+    background: #f3f4fb;
+    padding: 60px 30px;
+    border-radius: 20px;
+    border-color: #1423560d;
+    box-shadow: 0 4px 8px #1423560d;
+    backdrop-filter: blur(10px);
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container > strong {   
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background-color: #34b4fb;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.container > p {
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/*
+controls
+*/
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.controls > button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    background: #34b4fb;
+    color: #f3f4fb;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px #1423560d;
+}
+.controls > button:hover {
+    color: #142356;
+    transform: translateY(-2px);
+}
+.controls > button:active {
+    transform: translateY(0);
+}
+
+/*
+stats
+*/
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.stats_info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    background: #1423560d;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    margin: 0;
+}
+.stats_info dt,
+.stats_info dd {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.stat_label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.stat_value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #14204f;
+}
+
+/*
+speed_control
+*/
+.speed_control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.speed_control > label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.speed_control > input {
+    width: 200px;
+}
+.speed_value {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+/*
+game_container
+*/
+.game_container {
+
+}
+
+/*
+isntruction
+*/
+.instruction {
+    text-align: left;
+    background-color: #1423560d;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+}
+.instruction h3 {
+    color: #333;
+    margin-top: 0;
+}
+.instruction ul {
+    color: #555;
+    line-height: 1.6;
+}
+.instruction strong {
+    color: #333;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .container > strong {
+        font-size: 2em;
+    }
+
+    .controls {
+        gap: 10px;
+    }
+
+    .controls > button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .stats {
+        gap: 15px;
+    }
+
+    #gameCanvas {
+        max-width: 100%;
+    }
+}
